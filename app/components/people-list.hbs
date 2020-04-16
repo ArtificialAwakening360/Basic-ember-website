@@ -1,0 +1,11 @@
+<h2>{{@title}}</h2>
+
+<ol>
+  {{#each @people as |person|}}
+    <li>
+      <button {{on 'click' (fn this.showPerson person)}}>{{person}}</button>
+    </li>
+  {{/each}}
+</ol>
+
+{{yield}}
